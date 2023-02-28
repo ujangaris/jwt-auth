@@ -23,3 +23,11 @@
         - buat database dengan nama auth_db
         - buat file config/Database.js
         - lalu panggil di dalam file index
+
+## Generate Tabel users pada database dengan Schema
+
+    - backend/models/UserModel.js
+        buat schema users
+    - index.js
+        import dan panggil UserModels.js , setelah digunakan matikan kembali
+        setelah berhasil mengenerate users tabel di setiap kali servernya direstart
