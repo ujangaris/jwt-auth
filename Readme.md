@@ -31,3 +31,17 @@
     - index.js
         import dan panggil UserModels.js , setelah digunakan matikan kembali
         setelah berhasil mengenerate users tabel di setiap kali servernya direstart
+
+## Setup endpoint dan send request menggunakan REST client
+
+    - backend/controllers/User.js
+        mengambil seluruh data user yang tersimpan dalam database menggunakan Sequelize ORM.
+    - backend/routes/index.js
+        mendefinisikan sebuah router untuk meng-handle HTTP GET request pada endpoint '/users'.
+    - index.js
+        - agar kita dapat menerima data dalam format json
+        - middleware
+    - pada Vscode install REST Client
+        - buat file didalam backend/request.test
+        - didalamnya paggil method GET http://localhost:5000/users
+            dan klik tesk Send Request, maka akan ada status 200 ok

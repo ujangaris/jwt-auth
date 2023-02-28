@@ -1,5 +1,6 @@
 import express from 'express';
 import db from './config/Database.js';
+import router from './routes/index.js';
 // import Users from './models/UserModel.js';
 
 const app = express();
@@ -15,4 +16,9 @@ try {
   console.error(error);
 }
 
+// agar kita dapat menerima data dalam format json
+app.use(express.json());
+
+// middleware
+app.use(router);
 app.listen(5000, () => console.log('Server running at port 5000'));
