@@ -45,3 +45,17 @@
         - buat file didalam backend/request.test
         - didalamnya paggil method GET http://localhost:5000/users
             dan klik tesk Send Request, maka akan ada status 200 ok
+
+## Function untuk register
+
+    - backend/controllers/User.js
+        - membuat function Register
+    - backend/routes/index.js
+        - pasang route register dengan method post
+    - backend/request.test
+        - POST http://localhost:5000/users
+        - pasang Content-Type: application/json
+    - pengujian pada file request.test
+        - klik Send Request pada POST
+        - jika success akan ada response: "msg": "Register Success"
+        - jika gagal : "message": "Password not match"
