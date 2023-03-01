@@ -74,3 +74,23 @@
         - klik Send Request pada POST
         - jika success response akan menampilkan accesstoken
         - jika email/password salah akan tanpil pesan error(user not found/wrong password)
+
+## Middleware
+
+    - backend/middleware/VerifyToken.js
+        - membuat function verifyToken untuk memverifikasi token yang dikirim oleh user
+    - routes/index.js
+        - import middleware verifyToken
+    - request.test
+        - klik Send Request pada POST Login kemudian copy tokennya
+        - kemudian pastekan pada POST Login setelah Bearer dan spasi
+        - jika success response akan menampilkan data user yang login(semua data yang login ditampilkan)
+        - jika setelah 20detik login dengan token yang sama akan muncul pesan forbiden
+    - controllers/users.js
+        - memasang Attribut yang berguna untuk menentukan kolom mana yang akan diambil
+          dari tabel basis data yang dituju untuk ditampilkan pada response
+    - request.test
+        - klik Send Request pada POST Login kemudian copy tokennya
+        - kemudian pastekan pada POST Login setelah Bearer dan spasi
+        - jika success response akan menampilkan data user yang login (id,name, dan email )
+        - jika setelah 20detik login dengan token yang sama akan muncul pesan forbiden

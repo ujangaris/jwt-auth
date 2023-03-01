@@ -4,7 +4,10 @@ import jwt from 'jsonwebtoken';
 
 export const getUsers = async (req, res) => {
   try {
-    const users = await Users.findAll();
+    const users = await Users.findAll({
+      // memasang Attribut yang berguna untuk menentukan kolom mana yang akan diambil dari tabel basis data yang dituju untuk ditampilkan pada response
+      attributes: ['id', 'name', 'email'],
+    });
     res.json(users);
   } catch (error) {
     console.log(error);
