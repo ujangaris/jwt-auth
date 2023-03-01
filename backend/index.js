@@ -1,8 +1,11 @@
 import express from 'express';
+import dotenv from 'dotenv';
 import db from './config/Database.js';
 import router from './routes/index.js';
 // import Users from './models/UserModel.js';
 
+// pasang config
+dotenv.config();
 const app = express();
 
 // untuk memastikan db berjalan dengan baik

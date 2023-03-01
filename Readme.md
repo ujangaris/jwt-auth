@@ -59,3 +59,18 @@
         - klik Send Request pada POST
         - jika success akan ada response: "msg": "Register Success"
         - jika gagal : "message": "Password not match"
+
+## Function untuk Login
+
+    - backend/.env
+        - membuat function login
+    - index.js
+        - import dan pasang config
+    - backend/controllers/User.js
+        - buat function login
+    - backend/routes/index.js
+        - import function didalam routenya(index.js)
+    - request.test
+        - klik Send Request pada POST
+        - jika success response akan menampilkan accesstoken
+        - jika email/password salah akan tanpil pesan error(user not found/wrong password)
